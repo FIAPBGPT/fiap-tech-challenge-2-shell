@@ -52,8 +52,6 @@ export default function Transacoes() {
   const { data: session } = useSession(); // os dados de sessão podem ser colocados no gerenciador de estados
   const { user } = useSelector((state: any) => state.user);
 
-
-  const { data: session } = useSession();
   const token = session?.user?.result?.token;
   let userId = "";
 
