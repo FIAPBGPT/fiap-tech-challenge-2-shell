@@ -338,7 +338,7 @@ export default function Home({ widgets }: Props) {
                     moeda={<span>{getCurrencyIcon(cotacao.moeda)}</span>}
                     nome={cotacao.nome}
                     cotacao={cotacao.cotacao}
-                    variacao={cotacao.variacao}
+                    variacao={cotacao.variacao}                  
                   />
                 ))
               )}

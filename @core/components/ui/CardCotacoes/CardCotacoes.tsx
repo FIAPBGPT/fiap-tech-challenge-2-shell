@@ -12,7 +12,7 @@ interface CardCotacoesProps {
 
 const CardCotacoes = ({ moeda, nome, cotacao, variacao }: CardCotacoesProps) => {
     return (
-        <CardCotacoesContainer>
+        <CardCotacoesContainer tabIndex={0}>
             <CardInfos>
                 <MoedaContainer>{moeda}</MoedaContainer>
                 <ContentInfo>

@@ -44,7 +44,7 @@ export default function Main() {
               lg={5}
               className="d-flex align-items-center mb-3 mt-5 mt-lg-0"
             >
-              <H1Bold>
+              <H1Bold tabIndex={0}>
                 Experimente mais liberdade no controle da sua vida financeira.
                 Crie sua conta com a gente!
               </H1Bold>
@@ -91,24 +91,25 @@ export default function Main() {
               lg={12}
               className="d-flex justify-content-center mb-4"
             >
-              <H3Bold>Vantagens do nosso banco:</H3Bold>
+              <H3Bold tabIndex={0}>Vantagens do nosso banco:</H3Bold>
             </Col>
           </Row>
           <Row>
             {vantagens.map((vantagem, index) => (
               <Col key={index} xs={12} sm={6} md={3} lg={3} className="mb-5">
-                <Row>
+                <Row tabIndex={0}>
                   <Col
                     xs={12}
                     sm={12}
                     md={12}
                     lg={12}
                     className="d-flex justify-content-center"
+                    
                   >
                     <img
                       className="advantage_image"
                       src={vantagem.icon}
-                      alt={vantagem.title}
+                      alt={`icone ${vantagem.title}`}
                     />
                   </Col>
                   <Col

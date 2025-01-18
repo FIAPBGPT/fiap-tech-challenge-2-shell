@@ -25,10 +25,10 @@ export default function Custom404() {
             <ContainerFHCustom>
               <RowCentered className="pt-4">
                 <Col xs={12} sm={12} md={12} lg={12} className="mb-4">
-                  <H1BoldError>Ops! Não encontramos a página... </H1BoldError>
+                  <H1BoldError tabIndex={0}>Ops! Não encontramos a página... </H1BoldError>
                 </Col>
                 <Col xs={12} sm={12} md={12} lg={12} className="mb-4">
-                  <H3BoldError>
+                  <H3BoldError tabIndex={0}>
                     E olha que exploramos o universo procurando por ela! Que tal
                     voltar e tentar novamente?
                   </H3BoldError>
@@ -40,6 +40,7 @@ export default function Custom404() {
                     disabled={false}
                     size={"sm"}
                     onClick={redirectToHome}
+                    tabIndex={0}
                   />
                 </Col>
                 <Col xs={12} sm={12} md={12} lg={12}>
