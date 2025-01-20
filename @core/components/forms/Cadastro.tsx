@@ -65,7 +65,7 @@ const CadastroForm: React.FC<CadastroFormProps> = ({ onSubmitAction }) => {
             </RowCentered>
             <Row className="mb-1">
               <Col xs={12} sm={12} md={12} lg={12}>
-                <PStrong>
+                <PStrong tabIndex={0}>
                   Preencha os campos abaixo para criar sua conta corrente!
                 </PStrong>
               </Col>

@@ -8,6 +8,7 @@ import {
   ButtonIcon
 } from "../../../../@theme/custom/CardSaldo";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Card } from "@mui/material";
 
 const CardSaldoComponent: React.FC<CardSaldoProps> = ({ name, balance, showBalance }) => {
   const [isBalanceVisible, setIsBalanceVisible] = useState(showBalance);
@@ -36,21 +37,23 @@ const CardSaldoComponent: React.FC<CardSaldoProps> = ({ name, balance, showBalan
   return (
     <CardSaldo>
       <ContentContainer>            
-        <TitleCard>Olá, {name} :)</TitleCard>        
-        <DateInfoCard>{dayOfWeek}, {formattedDate}</DateInfoCard>
+        <TitleCard tabIndex={0}>Olá, {name} :)</TitleCard>        
+        <DateInfoCard tabIndex={0}>{dayOfWeek}, {formattedDate}</DateInfoCard>
       </ContentContainer>
       
       <ContentBalanceContainer>
         <BalanceRow>            
           <TitleBalance>Saldo</TitleBalance>
-          <ButtonIcon onClick={toggleBalanceVisibility}>
+          <ButtonIcon onClick={toggleBalanceVisibility} tabIndex={0}>
             {isBalanceVisible ? <FaEye /> : <FaEyeSlash />}
           </ButtonIcon>
         </BalanceRow>
         <DividerBalance />
         
         <SubTitleBalance>Conta Corrente</SubTitleBalance>
-        <ValueBalance>
+        <ValueBalance
+          aria-labelledby={isBalanceVisible ? 'Saldo conta corrente oculto' : formatCurrency(balance)}
+          tabIndex={0}>
           {isBalanceVisible ? formatCurrency(balance) : 'R$ XXXX'}
         </ValueBalance>
       </ContentBalanceContainer>
