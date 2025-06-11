@@ -26,7 +26,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run tests
-      run: npm run lint
+      run: |-
+        npm install
+        npm run lint
 
     - uses: google-github-actions/setup-gcloud@1bee7de035d65ec5da40a31f8589e240eba8fde5
       with:
